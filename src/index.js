@@ -19,7 +19,7 @@ mongoose.connect("mongodb://localhost:27017/twitter-node", {
   useUnifiedTopology: true
 });
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: `http://localhost:${port}` }));
 
 app.use((req, res, next) => {
   req.io = io;
